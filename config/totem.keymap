@@ -53,10 +53,10 @@
             //                           | RSE | SPC | LWR |   | LWR | BSPC | RSE |
 
             bindings = <
-                        &kp Q          &kp W                     &kp E           &kp R        &ht RA(T) T    &kp Y  &kp U      &ht RA(I) I       &kp O        &kp P
-                        &none          &ht LEFT_WIN A            &ht LEFT_ALT S  &ht LCTRL D  &kp G          &kp G  &kp H      &ht LEFT_SHIFT J  &ht LCTRL K  &ht LEFT_ALT L
-&ht LEFT_WIN SEMICOLON  &kp RA(COMMA)  &ht RA(NUMBER_2) RA(DOT)  &kp Z           &kp X        &kp C          &kp V  &kp B      &kp N             &ht RA(M) M  &kp COMMA       &kp PERIOD
-                                                                 &kp SLASH       &none        &kp ESCAPE     &mo 2  &kp SPACE  &kp ENTER
+                &kp Q           &kp W           &kp E        &kp R             &ht RA(T) T    &kp Y      &kp U             &ht RA(I) I    &kp O           &kp P
+                &ht LEFT_WIN A  &ht LEFT_ALT S  &ht LCTRL D  &ht LEFT_SHIFT F  &kp G          &kp H      &ht LEFT_SHIFT J  &ht LCTRL K    &ht LEFT_ALT L  &ht LEFT_WIN SEMICOLON
+&kp RA(PERIOD)  &kp Z           &kp X           &kp C        &kp V             &kp B          &kp N      &ht RA(M) M       &kp COMMA      &kp PERIOD      &kp SLASH               &kp PERIOD
+                                                &kp ESCAPE   &mo 2             &kp SPACE      &kp ENTER  &mo 1             &kp BACKSPACE
             >;
         };
 
