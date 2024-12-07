@@ -53,10 +53,10 @@
             //                           | RSE | SPC | LWR |   | LWR | BSPC | RSE |
 
             bindings = <
-                     &kp Q           &kp W           &kp E        &kp R             &ht RA(T) T  &kp Y      &kp U             &ht RA(I) I    &kp O           &kp P                   &none
-  &ht LEFT_WIN A  &ht LEFT_ALT S  &ht LCTRL D  &ht LEFT_SHIFT F  &kp G        &kp H      &ht LEFT_SHIFT J  &ht LCTRL K    &ht LEFT_ALT L  &ht LEFT_WIN SEMICOLON  &kp RA(COMMA)
-&ht RA(NUMBER_2) RA(DOT)                     &kp Z           &kp X           &kp C        &kp V             &kp B        &kp N      &ht RA(M) M       &kp COMMA      &kp PERIOD      &kp SLASH               &none
-                                                          &kp ESCAPE   &mo 2             &kp SPACE    &kp ENTER  &mo 1             &kp BACKSPACE
+                        &kp Q          &kp W                     &kp E           &kp R        &ht RA(T) T    &kp Y  &kp U      &ht RA(I) I       &kp O        &kp P
+                        &none          &ht LEFT_WIN A            &ht LEFT_ALT S  &ht LCTRL D  &kp G          &kp G  &kp H      &ht LEFT_SHIFT J  &ht LCTRL K  &ht LEFT_ALT L
+&ht LEFT_WIN SEMICOLON  &kp RA(COMMA)  &ht RA(NUMBER_2) RA(DOT)  &kp Z           &kp X        &kp C          &kp V  &kp B      &kp N             &ht RA(M) M  &kp COMMA       &kp PERIOD
+                                                                 &kp SLASH       &none        &kp ESCAPE     &mo 2  &kp SPACE  &kp ENTER
             >;
         };
 
@@ -68,10 +68,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-  &kp HOME          &kp LC(LEFT)       &kp UP_ARROW    &kp LC(RIGHT)         &kp PAGE_UP    &kp PLUS      &kp NUMBER_7             &kp NUMBER_8        &kp NUMBER_9           &kp KP_MULTIPLY         &none
-  &ht LEFT_WIN TAB  &ht LEFT_ALT LEFT  &ht LCTRL DOWN  &ht LEFT_SHIFT RIGHT  &kp PAGE_DOWN  &kp KP_MINUS  &ht LEFT_SHIFT NUMBER_4  &ht RCTRL NUMBER_5  &ht LEFT_ALT NUMBER_6  &ht LEFT_WIN KP_DIVIDE  &none
-&none  &kp END           &kp LS(LC(LEFT))   &trans          &kp LS(LC(RIGHT))     &kp INSERT     &kp EQUAL     &kp NUMBER_1             &kp NUMBER_2        &kp NUMBER_3           &kp N0                  &none
-                                            &trans          &mo 3                 &trans         &trans        &mo 3                    &trans
+                        &kp HOME  &kp LC(LEFT)      &kp UP_ARROW       &kp LC(RIGHT)     &kp PAGE_UP             &kp PLUS           &kp NUMBER_7  &kp NUMBER_8             &kp NUMBER_9        &kp KP_MULTIPLY
+                        &none     &ht LEFT_WIN TAB  &ht LEFT_ALT LEFT  &ht LCTRL DOWN    &ht LEFT_SHIFT RIGHT    &kp PAGE_DOWN      &kp KP_MINUS  &ht LEFT_SHIFT NUMBER_4  &ht RCTRL NUMBER_5  &ht LEFT_ALT NUMBER_6
+&ht LEFT_WIN KP_DIVIDE  &none     &none             &kp END            &kp LS(LC(LEFT))  &trans                  &kp LS(LC(RIGHT))  &kp INSERT    &kp EQUAL                &kp NUMBER_1        &kp NUMBER_2           &kp NUMBER_3
+                                                    &kp N0             &none             &trans                  &mo 3              &trans        &trans
             >;
         };
 
@@ -83,10 +83,10 @@
             //                          |     |     | ADJ |   | ADJ |     |     |
 
             bindings = <
-       &kp RA(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_6)  &kp RA(BACKSLASH)  &kp RA(LEFT_BRACKET)      &kp RA(RIGHT_BRACKET)      &kp RA(LS(SEMICOLON))  &kp RA(SINGLE_QUOTE)      &none
-  &kp BACKSLASH     &kp LS(NUMBER_8)  &kp MINUS         &kp LS(EQUAL)     &kp EQUAL         &kp LS(NUMBER_7)   &kp LS(NUMBER_9)          &kp LS(NUMBER_0)           &kp RA(SEMICOLON)      &kp RA(LS(SINGLE_QUOTE))  &kp LS(BACKSLASH)
-&kp LS(N5)       &kp RA(NUMBER_2)  &kp RA(MINUS)     &kp LS(NUMBER_1)  &kp RA(SLASH)     &none             &kp RS(MINUS)      &kp RA(LS(LEFT_BRACKET))  &kp RS(RA(RIGHT_BRACKET))  &kp RA(LS(COMMA))      &kp RA(LS(DOT))           &none
-                                                &none             &mo 3             &none             &trans             &mo 3                     &kp DEL
+                          &kp RA(NUMBER_1)   &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_6)    &kp RA(BACKSLASH)  &kp RA(LEFT_BRACKET)  &kp RA(RIGHT_BRACKET)  &kp RA(LS(SEMICOLON))     &kp RA(SINGLE_QUOTE)
+                          &none              &kp BACKSLASH     &kp LS(NUMBER_8)  &kp MINUS         &kp LS(EQUAL)       &kp EQUAL          &kp LS(NUMBER_7)      &kp LS(NUMBER_9)       &kp LS(NUMBER_0)          &kp RA(SEMICOLON)
+&kp RA(LS(SINGLE_QUOTE))  &kp LS(BACKSLASH)  &kp LS(N5)        &kp RA(NUMBER_2)  &kp RA(MINUS)     &kp LS(NUMBER_1)    &kp RA(SLASH)      &none                 &kp RS(MINUS)          &kp RA(LS(LEFT_BRACKET))  &kp RS(RA(RIGHT_BRACKET))  &kp RA(LS(COMMA))
+                                                               &kp RA(LS(DOT))   &none             &none               &mo 3              &none                 &trans
             >;
         };
 
@@ -98,19 +98,19 @@
             //                          |     |     |     |   |     |     |     |
 
             bindings = <
-  &kp F1  &kp F2   &kp F3   &kp F4   &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT    &kp C_REWIND  &kp C_FAST_FORWARD
-  &kp F5  &kp F6   &kp F7   &kp F8   &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp LEFT_SHIFT  &kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &none
-&mo 4  &kp F9  &kp F10  &kp F11  &kp F12  &sleep_macro          &kp C_MUTE         &mkp LCLK       &none             &none         &none         &none
-                        &none    &none    &none                 &none              &none           &none
+              &kp F1              &kp F2  &kp F3  &kp F4   &kp C_BRIGHTNESS_INC    &kp C_VOLUME_UP       &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_REWIND
+              &kp C_FAST_FORWARD  &kp F5  &kp F6  &kp F7   &kp F8                  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp LEFT_SHIFT    &kp LCTRL   &kp LEFT_ALT
+&kp LEFT_WIN  &none               &mo 4   &kp F9  &kp F10  &kp F11                 &kp F12               &sleep_macro       &kp C_MUTE        &mkp LCLK   &none         &none
+                                          &none   &none    &none                   &none                 &none              &none
             >;
         };
 
         layer_4 {
             bindings = <
-           &none         &none         &none  &none        &none  &none  &none  &none  &none  &none  &none
-  &bt BT_SEL 0  &bt BT_SEL 1  &none  &bootloader  &none  &none  &none  &none  &none  &none  &none
-&bt BT_CLR_ALL           &none         &none         &none  &none        &none  &none  &none  &none  &none  &none  &none
-                                            &none  &none        &none  &none  &none  &none
+       &none  &none           &none         &none  &none          &none  &none  &none  &none  &none
+       &none  &bt BT_SEL 0    &bt BT_SEL 1  &none  &bootloader    &none  &none  &none  &none  &none
+&none  &none  &bt BT_CLR_ALL  &none         &none  &none          &none  &none  &none  &none  &none  &none
+                              &none         &none  &none          &none  &none  &none
             >;
         };
     };
