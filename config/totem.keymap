@@ -38,7 +38,7 @@
 
         changing_the_language {
             bindings = <&kp LC(LEFT_SHIFT)>;
-            key-positions = <16 15 19 20>;
+            key-positions = <16 12 13 17>;
         };
     };
 
