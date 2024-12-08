@@ -16,8 +16,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <230>;
-            quick-tap-ms = <230>;
+            tapping-term-ms = <350>;
+            quick-tap-ms = <350>;
             require-prior-idle-ms = <100>;
             flavor = "tap-preferred";
         };
@@ -68,10 +68,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-        &kp HOME          &kp LC(LEFT)       &kp UP_ARROW    &kp LC(RIGHT)         &kp PAGE_UP      &kp PLUS   &kp NUMBER_7             &kp NUMBER_8        &kp NUMBER_9           &kp KP_MULTIPLY
-        &ht LEFT_WIN TAB  &ht LEFT_ALT LEFT  &ht LCTRL DOWN  &ht LEFT_SHIFT RIGHT  &kp PAGE_DOWN    &kp MINUS  &ht LEFT_SHIFT NUMBER_4  &ht LCTRL NUMBER_5  &ht LEFT_ALT NUMBER_6  &ht LEFT_WIN KP_SLASH
-&trans  &kp END           &kp LS(LC(LEFT))   &none           &kp LS(LC(RIGHT))     &kp INSERT       &kp EQUAL  &kp NUMBER_1             &kp NUMBER_2        &kp NUMBER_3           &kp NUMBER_0           &trans
-                                             &trans          &mo 3                 &trans           &trans     &mo 3                    &trans
+        &kp HOME  &kp LC(LEFT)      &kp UP_ARROW    &kp LC(RIGHT)      &kp PAGE_UP      &kp PLUS   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_MULTIPLY
+        &kp TAB   &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &kp PAGE_DOWN    &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_DIVIDE
+&trans  &kp END   &kp LS(LC(LEFT))  &none           &kp LS(LC(RIGHT))  &kp INSERT       &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0     &trans
+                                    &trans          &mo 3              &trans           &trans     &mo 3         &trans
             >;
         };
 
