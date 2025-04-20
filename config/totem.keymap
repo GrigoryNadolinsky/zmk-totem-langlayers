@@ -24,13 +24,6 @@
         };
     };
 
-    &mmv {
-            x-input-code = <INPUT_REL_X>;
-            y-input-code = <INPUT_REL_Y>;
-            time-to-max-speed-ms = <300>;
-            acceleration-exponent = <1>;
-        };
-
     macros {
         sleep_macro: sleep_macro {
             compatible = "zmk,behavior-macro";
@@ -132,3 +125,9 @@
         };
     };
 };
+&mmv {
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        time-to-max-speed-ms = <300>;
+        acceleration-exponent = <1>;
+    };
