@@ -126,4 +126,7 @@
     };
 };
 
-&mmv { acceleration-exponent = <2>; };
+&mmv {
+    acceleration-exponent = <10>;
+    time-to-max-speed-ms = <100>;
+};
