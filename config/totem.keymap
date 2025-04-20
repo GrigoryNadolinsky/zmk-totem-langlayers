@@ -117,10 +117,10 @@
 
         mouse_layer {
             bindings = <
-       &none  &none              &mmv MOVE_Y(-600)  &none             &none    &none  &none           &msc SCRL_UP    &none            &none
-       &none  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &none    &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
-&none  &none  &mkp MCLK          &mkp RCLK          &mkp LCLK         &none    &none  &mkp LCLK       &mkp RCLK       &mkp MCLK        &none  &none
-                                 &none              &none             &none    &none  &none           &none
+       &none  &none           &mmv MOVE_UP    &none            &none    &none  &none           &msc SCRL_UP    &none            &none
+       &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none    &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
+&none  &none  &mkp MCLK       &mkp RCLK       &mkp LCLK        &none    &none  &mkp LCLK       &mkp RCLK       &mkp MCLK        &none  &none
+                              &none           &none            &none    &none  &none           &none
             >;
         };
     };
@@ -128,5 +128,5 @@
 
 &mmv {
     acceleration-exponent = <10>;
-    time-to-max-speed-ms = <100>;
+    time-to-max-speed-ms = <50>;
 };
