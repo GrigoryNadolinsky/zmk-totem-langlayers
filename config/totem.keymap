@@ -22,6 +22,22 @@
             require-prior-idle-ms = <100>;
             flavor = "tap-preferred";
         };
+
+        mmv_accel: mmv {
+            compatible = "zmk,behavior-input-two-axis";
+            label = "Mouse Move with Acceleration";
+            bindings = <&mmv>;
+            time-to-max-speed-ms = <300>;
+            acceleration-exponent = <2>;
+        };
+
+        msc_accel: msc {
+            compatible = "zmk,behavior-input-two-axis";
+            label = "Scroll with Acceleration";
+            bindings = <&msc>;
+            time-to-max-speed-ms = <300>;
+            acceleration-exponent = <1>;
+        };
     };
 
     macros {
