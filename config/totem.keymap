@@ -23,14 +23,11 @@
             flavor = "tap-preferred";
         };
 
-        mmv_accel: mmv_accel {
-            compatible = "zmk,behavior-input-two-axis";
-            label = "MMV_ACCEL";
-            #binding-cells = <1>;
-            x-input-code = <0>;
-            y-input-code = <1>;
-            time-to-max-speed-ms = <150>;
-            acceleration-exponent = <2>;
+        &mmv {
+            x-input-code = <INPUT_REL_X>;
+            y-input-code = <INPUT_REL_Y>;
+            time-to-max-speed-ms = <300>;
+            acceleration-exponent = <1>;
         };
     };
 
