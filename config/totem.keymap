@@ -1,7 +1,8 @@
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define DEF 0
 #define LWR 1
@@ -53,10 +54,10 @@
             //                           | RSE | SPC | LWR |   | LWR | BSPC | RSE |
 
             bindings = <
-                &kp Q           &kp W           &kp E        &kp R             &ht RA(T) T    &kp Y      &kp U             &ht RA(I) I    &kp O           &kp P
-                &ht LEFT_WIN A  &ht LEFT_ALT S  &ht LCTRL D  &ht LEFT_SHIFT F  &kp G          &kp H      &ht LEFT_SHIFT J  &ht LCTRL K    &ht LEFT_ALT L  &ht LEFT_WIN SEMICOLON
-&kp RA(PERIOD)  &kp Z           &kp X           &kp C        &kp V             &kp B          &kp N      &ht RA(M) M       &kp COMMA      &kp PERIOD      &kp SLASH               &kp RA(COMMA)
-                                                &kp ESCAPE   &mo 2             &kp SPACE      &kp ENTER  &mo 1             &kp BACKSPACE
+                &kp Q           &kp W           &kp E        &kp R             &ht RA(T) T    &kp Y      &kp U             &ht RA(I) I      &kp O           &kp P
+                &ht LEFT_WIN A  &ht LEFT_ALT S  &ht LCTRL D  &ht LEFT_SHIFT F  &kp G          &kp H      &ht LEFT_SHIFT J  &ht LCTRL K      &ht LEFT_ALT L  &ht LEFT_WIN SEMICOLON
+&kp RA(PERIOD)  &kp Z           &kp X           &kp C        &kp V             &kp B          &kp N      &ht RA(M) M       &kp COMMA        &kp PERIOD      &kp SLASH               &kp RA(COMMA)
+                                                &kp ESCAPE   &lt 2 TAB         &kp SPACE      &kp ENTER  &mo 1             &lt 5 BACKSPACE
             >;
         };
 
@@ -111,6 +112,15 @@
        &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bootloader  &none    &none  &none  &none  &none  &none
 &none  &none           &none         &none         &none        &none    &none  &none  &none  &none  &none  &none
                                      &none         &none        &none    &none  &none  &none
+            >;
+        };
+
+        mouse_layer {
+            bindings = <
+        &trans  &trans          &mmv MOVE_UP    &trans           &trans    &trans  &trans          &msc SCRL_UP    &trans           &trans
+        &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans
+&trans  &trans  &trans          &trans          &trans           &trans    &trans  &trans          &trans          &trans           &trans  &trans
+                                &trans          &trans           &trans    &trans  &trans          &trans
             >;
         };
     };
