@@ -22,6 +22,16 @@
             require-prior-idle-ms = <100>;
             flavor = "tap-preferred";
         };
+
+        mmv_accel: mmv_accel {
+            compatible = "zmk,behavior-input-two-axis";
+            label = "MMV_ACCEL";
+            #binding-cells = <1>;
+            x-input-code = <0>;
+            y-input-code = <1>;
+            time-to-max-speed-ms = <150>;
+            acceleration-exponent = <2>;
+        };
     };
 
     macros {
@@ -117,10 +127,10 @@
 
         mouse_layer {
             bindings = <
-       &none  &none           &mmv MOVE_UP    &none            &none    &none  &none           &msc SCRL_UP    &none            &none
-       &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none    &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
-&none  &none  &mkp MCLK       &mkp RCLK       &mkp LCLK        &none    &none  &mkp LCLK       &mkp RCLK       &mkp MCLK        &none  &none
-                              &none           &none            &none    &none  &none           &none
+       &none  &none                 &mmv_accel MOVE_UP    &none                  &none    &none  &none           &msc SCRL_UP    &none            &none
+       &none  &mmv_accel MOVE_LEFT  &mmv_accel MOVE_DOWN  &mmv_accel MOVE_RIGHT  &none    &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none
+&none  &none  &mkp MCLK             &mkp RCLK             &mkp LCLK              &none    &none  &mkp LCLK       &mkp RCLK       &mkp MCLK        &none  &none
+                                    &none                 &none                  &none    &none  &none           &none
             >;
         };
     };
