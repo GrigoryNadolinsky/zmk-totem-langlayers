@@ -53,6 +53,13 @@
             bindings = <&switch_language &to 0>;
             label = "SWITCH_ENG";
         };
+
+        eng_grave_accent: GRAVE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&switch_language &kp GRAVE &switch_language>;
+            label = "GRAVE";
+        };
     };
 
     combos {
@@ -82,19 +89,19 @@
             //                           | RSE | SPC | LWR |   | LWR | BSPC | RSE |
 
             bindings = <
-                &kp Q           &kp W           &kp E        &kp R             &ht RA(T) T    &kp Y      &kp U             &ht RA(I) I      &kp O           &kp P
-                &ht LEFT_WIN A  &ht LEFT_ALT S  &ht LCTRL D  &ht LEFT_SHIFT F  &kp G          &kp H      &ht LEFT_SHIFT J  &ht LCTRL K      &ht LEFT_ALT L  &ht LEFT_WIN SEMICOLON
-&kp RA(PERIOD)  &kp Z           &kp X           &kp C        &kp V             &kp B          &kp N      &ht RA(M) M       &kp COMMA        &kp PERIOD      &kp SLASH               &kp RA(COMMA)
-                                                &kp ESCAPE   &lt 2 TAB         &kp SPACE      &kp ENTER  &mo 4             &lt 8 BACKSPACE
+       &kp Q           &kp W           &kp E        &kp R             &kp T        &kp Y      &kp U             &kp I        &kp O           &kp P
+       &ht LEFT_WIN A  &ht LEFT_ALT S  &ht LCTRL D  &ht LEFT_SHIFT F  &kp G        &kp H      &ht LEFT_SHIFT J  &ht LCTRL K  &ht LEFT_ALT L  &ht LEFT_WIN SEMICOLON
+&none  &kp Z           &kp X           &kp C        &kp V             &kp B        &kp N      &kp M             &none        &none           &none                   &none
+                                       &kp ESCAPE   &lt 2 TAB         &kp SPACE    &kp ENTER  &kp BACKSPACE     &mo 7
             >;
         };
 
         russian_layer {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+       &kp Q           &kp W           &kp E        &kp R             &ht GRAVE T    &kp Y   &kp U                &ht O I      &kp P           &kp LEFT_BRACKET
+       &ht LEFT_WIN A  &ht LEFT_ALT S  &ht LCTRL D  &ht LEFT_SHIFT F  &kp G          &kp H   &ht LEFT_SHIFT J     &ht LCTRL K  &ht LEFT_ALT L  &ht LEFT_WIN SEMICOLON
+&none  &kp Z           &kp X           &kp C        &kp V             &kp B          &kp N   &ht RIGHT_BRACKET M  &kp COMMA    &kp PERIOD      &kp SQT                 &none
+                                       &kp ESCAPE   &kp TAB           &trans         &trans  &trans               &trans
             >;
         };
 
@@ -106,19 +113,19 @@
             //                          |     |     | ADJ |   | ADJ |     |     |
 
             bindings = <
-                  &kp RA(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_6)    &kp RA(BACKSLASH)  &kp RA(LEFT_BRACKET)      &kp RA(RIGHT_BRACKET)      &kp RA(LS(SEMICOLON))  &kp RA(SINGLE_QUOTE)
-                  &kp BACKSLASH     &kp LS(NUMBER_8)  &kp MINUS         &kp LS(EQUAL)     &kp EQUAL           &kp LS(NUMBER_7)   &kp LS(NUMBER_9)          &kp LS(NUMBER_0)           &kp RA(SEMICOLON)      &kp RA(LS(APOSTROPHE))
-&kp LS(NUMBER_5)  &kp RA(NUMBER_2)  &kp RA(MINUS)     &kp LS(NUMBER_1)  &kp RA(SLASH)     &none               &kp LS(MINUS)      &kp RA(LS(LEFT_BRACKET))  &kp RA(LS(RIGHT_BRACKET))  &kp RA(LS(COMMA))      &kp RA(LS(PERIOD))      &kp LS(BACKSLASH)
-                                                      &none             &mo 5             &none               &trans             &mo 5                     &kp DELETE
+       &kp GRAVE                   &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_6)    &kp LS(NON_US_BACKSLASH)  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LS(SEMICOLON)  &kp SQT
+       &ht NON_US_BACKSLASH SLASH  &kp LS(NUMBER_8)  &kp MINUS         &kp LS(EQUAL)     &kp EQUAL           &kp LS(NUMBER_7)          &kp LS(N9)            &kp LS(NUMBER_0)       &kp SEMICOLON      &kp LS(SQT)
+&none  &kp LS(NUMBER_1)            &kp LS(SLASH)     &kp PERIOD        &kp COMMA         &kp LS(N5)          &kp LS(MINUS)             &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(COMMA)      &kp LS(PERIOD)  &none
+                                                     &none             &mo 5             &none               &trans                    &mo 5                 &none
             >;
         };
 
         rus_symbol_layer {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+       &eng_grave_accent                          &trans      &trans      &trans          &trans              &trans         &trans      &trans      &kp LS(NUMBER_6)  &trans
+       &ht NON_US_BACKSLASH LS(NON_US_BACKSLASH)  &kp LS(N8)  &kp MINUS   &kp LS(EQUAL)   &kp EQUAL           &trans         &kp LS(N9)  &kp LS(N0)  &kp LS(NUMBER_4)  &kp LS(NUMBER_2)
+&none  &kp LS(NUMBER_1)                           &kp LS(N7)  &kp PERIOD  &kp LS(PERIOD)  &kp LS(NUMBER_5)    &kp LS(MINUS)  &trans      &trans      &trans            &trans            &none
+                                                              &trans      &trans          &trans              &trans         &trans      &trans
             >;
         };
 
