@@ -57,7 +57,7 @@
         eng_grave_accent: eng_grave_accent {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&switch_language &kp GRAVE &switch_eng>;
+            bindings = <&switch_language &kp GRAVE &switch_language>;
             label = "ENG_GRAVE_ACCENT";
         };
 
@@ -78,7 +78,10 @@
         eng_dollar: eng_dollar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&switch_language &kp LS(NUMBER_4) &switch_language>;
+            bindings =
+                <&switch_language &kp LS(NUMBER_4) &switch_language>,
+                <&macro_wait_time 100>;
+
             label = "ENG_DOLLAR";
         };
     };
